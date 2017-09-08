@@ -1,0 +1,39 @@
+/*estilos de videode fondo*/
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+  }
+
+.imgMrList{
+  padding-top: 30px;
+}
+
+
+.redes{
+  position:fixed; /*El div será ubicado con relación a la pantalla*/
+  left:0px; /*A la derecha deje un espacio de 0px*/
+  right:0px; /*A la izquierda deje un espacio de 0px*/
+  bottom:0px; /*Abajo deje un espacio de 0px*/
+  z-index:0;
+}
+
+.slider {
+      position:fixed; /*El div será ubicado con relación a la pantalla*/
+      left:0px; /*A la derecha deje un espacio de 0px*/
+      right:0px; /*A la izquierda deje un espacio de 0px*/
+      height: 19%;
+      width: 80%;
+}
+h4{
+  font-family: 'Pangolin', cursive;
+}

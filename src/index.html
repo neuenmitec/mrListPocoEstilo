@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MrList</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+  <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+</head>
+
+<body style="background-image: url(./assets/img/negro.png)">
+  <app-root></app-root>
+</body>
+
+</html>
+
+<script src="assets/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<script type="text/javascript">
+  $(document).on('ready', function() {
+    $('.single-item').slick({
+      dots: true,
+      infinite: true,
+      arrows: false,
+      autoplay: true,
+    });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $('.collapsible').collapsible();
+    $('.select').material_select();
+    $(".button-collapse").sideNav();
+    $('.carousel').carousel();
+    $('.modal').modal();
+    $('.segment').dimmer('show');
+    $('.segment').dimmer('hide');
+    $('.ui.accordion')
+      .accordion();
+
+
+  });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.add_button'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+    var fieldHTML = '<div><input id="search" type="search" name="field_name[]" value=""/><a href="javascript:void(0);" class="remove_button" title="Remove field"><i class="material-icons">delete_sweep</i></a></div>'; //New input field html
+    var x = 1; //Initial field counter is 1
+    $(addButton).click(function(){ //Once add button is clicked
+        if(x < maxField){ //Check maximum number of input fields
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); // Add field html
+        }
+    });
+    $(wrapper).on('click', '.remove_button', function(e){ //Once remove button is clicked
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+</script>
